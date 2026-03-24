@@ -3,6 +3,7 @@
 #include "library.h"
 
 #include <type_traits>
+#include <utility>
 
 namespace {
 
@@ -17,10 +18,12 @@ Library make_sample_library() {
 }  // namespace
 
 TEST_CASE("library search is const and does not mutate catalog") {
+    static_assert(std::is_same_v<
+        decltype(std::declval<const Library&>().find_by_title("Effective Modern C++")),
+        std::optional<std::reference_wrapper<const Book>>>);
+
     const Library library = make_sample_library();
     const auto result = library.find_by_title("Effective Modern C++");
-
-    static_assert(std::is_same_v<decltype(result), const std::optional<std::reference_wrapper<const Book>>>);
 
     CHECK(result.has_value());
     CHECK(library.size() == 3);
