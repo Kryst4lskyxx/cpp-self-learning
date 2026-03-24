@@ -1,0 +1,9 @@
+add_executable(module_01_tests test_hello_cli.cpp)
+target_link_libraries(module_01_tests PRIVATE learning_test_main)
+cpp_self_learning_enable_warnings(module_01_tests)
+target_compile_features(module_01_tests PRIVATE cxx_std_20)
+target_compile_definitions(module_01_tests PRIVATE MODULE_01_ASSIGNMENT_EXE="$<TARGET_FILE:module_01_assignment>")
+
+add_dependencies(module_01_tests module_01_assignment)
+
+add_test(NAME module_01_hello_cli COMMAND module_01_tests)

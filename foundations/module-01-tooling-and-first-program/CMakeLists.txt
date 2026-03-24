@@ -1,0 +1,7 @@
+add_executable(module_01_assignment assignment/main.cpp)
+cpp_self_learning_enable_warnings(module_01_assignment)
+target_compile_features(module_01_assignment PRIVATE cxx_std_20)
+
+add_executable(module_01_drill drills/hello_cli.cpp)
+cpp_self_learning_enable_warnings(module_01_drill)
+target_compile_features(module_01_drill PRIVATE cxx_std_20)
