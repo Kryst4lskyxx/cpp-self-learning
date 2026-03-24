@@ -1,0 +1,5 @@
+add_library(module_04_assignment assignment/query_engine.cpp)
+target_include_directories(module_04_assignment PUBLIC assignment)
+cpp_self_learning_enable_warnings(module_04_assignment)
+target_compile_features(module_04_assignment PRIVATE cxx_std_20)
+

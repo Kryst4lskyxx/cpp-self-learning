@@ -1,0 +1,6 @@
+add_executable(module_04_tests test_query_engine.cpp)
+target_link_libraries(module_04_tests PRIVATE learning_test_main module_04_assignment)
+cpp_self_learning_enable_warnings(module_04_tests)
+target_compile_features(module_04_tests PRIVATE cxx_std_20)
+
+add_test(NAME module_04_query_engine COMMAND module_04_tests)
