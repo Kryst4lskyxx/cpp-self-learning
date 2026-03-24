@@ -14,6 +14,7 @@ list(PREPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/tooling/cmake")
 
 include(cmake/Warnings.cmake)
 include(cmake/Testing.cmake)
+add_subdirectory(foundations)
 if(BUILD_TESTING)
     add_subdirectory(tooling/tests)
 endif()
