@@ -9,3 +9,5 @@ The test expects:
 - the result to report whether a matching book was found
 
 Keep the design small. A `Book` value type and a `std::vector<Book>` are enough.
+
+Remember: a `const` member function means the hidden `this` parameter points to const, so search can inspect but not mutate the `Library`. If you return a reference-like result, its lifetime is tied to the `Library` that owns the book.

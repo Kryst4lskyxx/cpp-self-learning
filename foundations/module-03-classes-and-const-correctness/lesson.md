@@ -4,10 +4,10 @@ This module is about the difference between “can I call this on a const object
 
 What to notice:
 
-- member functions marked `const` promise not to modify the observable object state
+- member functions marked `const` promise not to modify the observable object state, and they constrain the type of `this` to a pointer to const
 - a `const Library` can still search and report its size
 - private data keeps the collection controlled, while public member functions define the API
-- returning `const Book*` or `std::optional<std::reference_wrapper<const Book>>` keeps search read-only
+- returning `const Book*` or `std::optional<std::reference_wrapper<const Book>>` keeps search read-only and ties the result lifetime to the owning `Library`
 
 Example:
 
@@ -20,4 +20,4 @@ if (result) {
 }
 ```
 
-The key mental model is simple: `const` applies to the object you are calling through, not just to the return type.
+The key mental model is simple: `const` applies to the object you are calling through, not just to the return type, and reference-like results stay valid only while the `Library` that owns the books still exists.

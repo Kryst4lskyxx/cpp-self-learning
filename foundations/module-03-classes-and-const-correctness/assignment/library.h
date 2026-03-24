@@ -19,7 +19,6 @@ public:
     void add_book(Book book);
 
     std::size_t size() const noexcept;
-    const std::vector<Book>& books() const noexcept;
     std::optional<std::reference_wrapper<const Book>> find_by_title(std::string_view title) const;
 
 private:
