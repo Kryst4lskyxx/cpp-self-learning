@@ -7,6 +7,8 @@ What to notice:
 - a range is usually represented by two iterators, and the end iterator is one past the last element
 - `std::distance(first, last)` measures the size of that half-open range
 - algorithms such as `std::binary_search` assume their input is already sorted
+- in this module, "sorted" means the range is in the default ascending order checked by
+  `std::is_sorted`
 
 The useful mental model is that algorithm contracts are part of the API, even when they are not written into the function signature.
 
