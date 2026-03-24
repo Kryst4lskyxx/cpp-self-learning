@@ -1,5 +1,6 @@
 #include "assertions.h"
 
+#include <exception>
 #include <iostream>
 #include <string_view>
 #include <vector>
@@ -40,6 +41,11 @@ void record_check(bool condition, const char* expression, const char* file, int 
 }
 
 int run_all_test_cases() {
+    if (test_cases().empty()) {
+        std::cerr << "No test cases registered\n";
+        return 1;
+    }
+
     for (const auto& test_case : test_cases()) {
         std::cout << "[ RUN      ] " << test_case.name << '\n';
         try {

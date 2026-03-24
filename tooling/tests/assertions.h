@@ -2,11 +2,6 @@
 
 namespace cpp_self_learning::testing {
 
-struct TestCase {
-    const char* name;
-    void (*function)();
-};
-
 bool register_test_case(const char* name, void (*function)());
 void record_check(bool condition, const char* expression, const char* file, int line);
 int run_all_test_cases();
