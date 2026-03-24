@@ -4,7 +4,8 @@ The default workflow is CLI-first on macOS or Linux, using `clang++` and CMake.
 
 ## Setup
 
-- Install a recent C++ toolchain with `clang++`, `cmake`, and `ctest`.
+- Install a recent C++ toolchain with `clang++` and CMake.
+- Use the `ctest` binary that comes with your CMake install.
 - Run all commands from the repository root unless a module says otherwise.
 
 ## Build

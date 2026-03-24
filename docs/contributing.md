@@ -25,7 +25,7 @@ This repo is designed for steady content growth, not large one-off drops.
 
 ## Practical Standards
 
-- Match the existing directory naming scheme.
+- Follow the directory naming scheme described in [learning-path.md](learning-path.md) and [content-contract.md](content-contract.md).
 - Keep commands reproducible from the repository root.
 - Update the docs if you change the learner path or module contract.
 - Prefer small commits that leave the repository in a usable state.

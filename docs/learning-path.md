@@ -2,7 +2,7 @@
 
 This repository is organized for experienced programmers who already know another language and want a practical path into modern C++.
 
-## Path
+## Intended Curriculum
 
 1. `foundations/`
    Start here for core language mechanics, standard library basics, and small exercises.
@@ -20,7 +20,7 @@ This repository is organized for experienced programmers who already know anothe
 
 ## Current Scope
 
-The repository is still being filled in. The path above is the intended order, but not every directory has content yet.
+The curriculum layout above is the intended order for future content. In the current repository, those learning directories are not populated yet, so this doc is a roadmap rather than a live module index.
 
 ## What Each Stage Should Cover
 

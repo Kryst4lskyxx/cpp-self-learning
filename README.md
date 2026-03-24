@@ -1,5 +1,8 @@
 # cpp-self-learning
 
+This repository currently has the root build skeleton and learner-facing docs.
+Start with [docs/learning-path.md](docs/learning-path.md) to understand the intended curriculum shape, then use [docs/tooling.md](docs/tooling.md) for the build and test commands.
+
 Expected root build commands after Task 1:
 
 ```cmake
@@ -10,10 +13,10 @@ Expected root build commands after Task 1:
 
 ## Documentation Checklist
 
-- [ ] Learning path
-- [ ] Tooling guide
-- [ ] Content contract
-- [ ] Contributor guide
+- [x] Learning path
+- [x] Tooling guide
+- [x] Content contract
+- [x] Contributor guide
 
 ## Docs
 
