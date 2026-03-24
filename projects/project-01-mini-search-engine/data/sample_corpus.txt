@@ -1,4 +1,4 @@
 doc1	modern cpp move semantics
 doc2	cpp streams and strings
 doc3	search engines rank documents by relevance
-doc4	modern c++ code uses reusable components
+doc4	modern cpp code uses reusable components
