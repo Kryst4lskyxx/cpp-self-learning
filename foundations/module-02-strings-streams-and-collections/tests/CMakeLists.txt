@@ -1,0 +1,6 @@
+add_executable(module_02_tests test_text_stats.cpp)
+target_link_libraries(module_02_tests PRIVATE learning_test_main)
+cpp_self_learning_enable_warnings(module_02_tests)
+target_compile_features(module_02_tests PRIVATE cxx_std_20)
+
+add_test(NAME module_02_text_stats COMMAND module_02_tests)

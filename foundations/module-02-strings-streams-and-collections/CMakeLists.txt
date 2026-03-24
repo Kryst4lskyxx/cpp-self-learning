@@ -1,0 +1,3 @@
+add_executable(module_02_drill drills/word_count.cpp)
+cpp_self_learning_enable_warnings(module_02_drill)
+target_compile_features(module_02_drill PRIVATE cxx_std_20)
