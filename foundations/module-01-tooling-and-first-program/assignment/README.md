@@ -2,8 +2,6 @@
 
 Implement `main.cpp` so the assignment executable prints:
 
-```text
-hello modern cpp
-```
+`hello modern cpp\n`
 
 Keep the program direct. No extra prompts, no extra output.
