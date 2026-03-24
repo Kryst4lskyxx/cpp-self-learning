@@ -1,0 +1,7 @@
+add_executable(expert_01_tests test_traceable.cpp)
+target_link_libraries(expert_01_tests PRIVATE learning_test_main expert_01_move_semantics_and_value_categories)
+cpp_self_learning_enable_warnings(expert_01_tests)
+target_compile_features(expert_01_tests PRIVATE cxx_std_20)
+
+add_test(NAME expert_01_traceable COMMAND expert_01_tests)
+

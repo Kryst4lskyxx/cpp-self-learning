@@ -1,0 +1,6 @@
+add_library(expert_01_move_semantics_and_value_categories INTERFACE)
+target_include_directories(expert_01_move_semantics_and_value_categories INTERFACE
+    "${CMAKE_CURRENT_SOURCE_DIR}/drills"
+)
+target_compile_features(expert_01_move_semantics_and_value_categories INTERFACE cxx_std_20)
+
