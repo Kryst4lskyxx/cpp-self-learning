@@ -4,7 +4,7 @@ A compact inverted-index search engine built as a small library, a command-line 
 
 Documents and queries are tokenized the same way: punctuation splits tokens, and letters are matched case-insensitively. Repeated query terms do not increase score.
 
-Results are ranked by the number of matched query tokens in each document, then by document id to keep ties deterministic.
+Results are ranked by the sum of term frequencies for the unique query tokens that appear in each document, then by document id to keep ties deterministic.
 
 ## Build
 

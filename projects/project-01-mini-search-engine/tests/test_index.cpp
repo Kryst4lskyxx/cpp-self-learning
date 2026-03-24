@@ -44,3 +44,14 @@ TEST_CASE("search index normalizes query tokens the same way as documents") {
     CHECK(results.front().document_id == "doc1");
     CHECK(results.front().score == 1);
 }
+
+TEST_CASE("search index splits punctuation in both documents and queries") {
+    SearchIndex index;
+    index.add_document("doc1", "modern-cpp, move!");
+
+    const auto results = index.search("cpp, move");
+
+    CHECK(results.size() == 1);
+    CHECK(results.front().document_id == "doc1");
+    CHECK(results.front().score == 2);
+}
