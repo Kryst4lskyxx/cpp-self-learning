@@ -1,0 +1,6 @@
+add_executable(module_05_tests test_contract_checks.cpp)
+target_link_libraries(module_05_tests PRIVATE learning_test_main module_05_assignment)
+cpp_self_learning_enable_warnings(module_05_tests)
+target_compile_features(module_05_tests PRIVATE cxx_std_20)
+
+add_test(NAME module_05_contract_checks COMMAND module_05_tests)

@@ -1,0 +1,3 @@
+add_library(module_05_assignment INTERFACE)
+target_include_directories(module_05_assignment INTERFACE assignment)
+target_compile_features(module_05_assignment INTERFACE cxx_std_20)
