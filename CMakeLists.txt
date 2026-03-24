@@ -1,3 +1,8 @@
+# Expected commands after this task:
+# cmake -S . -B build
+# cmake --build build
+# ctest --test-dir build
+
 cmake_minimum_required(VERSION 3.20)
 project(cpp_self_learning LANGUAGES CXX)
 
