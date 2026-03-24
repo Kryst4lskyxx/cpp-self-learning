@@ -1,0 +1,6 @@
+add_executable(module_06_tests test_pipeline.cpp)
+target_link_libraries(module_06_tests PRIVATE learning_test_main module_06_assignment)
+cpp_self_learning_enable_warnings(module_06_tests)
+target_compile_features(module_06_tests PRIVATE cxx_std_20)
+
+add_test(NAME module_06_pipeline COMMAND module_06_tests)
