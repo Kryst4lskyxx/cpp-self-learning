@@ -7,7 +7,7 @@ The key bridge for experienced programmers is that C++ usually gives you two way
 - string operations on the text itself
 - stream extraction for parsing it incrementally
 
-For this module, `std::getline` splits text into lines, `std::istringstream` parses words from each line, and a container such as `std::vector` can hold the intermediate lines when that makes the logic easier to follow.
+For this module, `std::getline` splits text into lines and consumes the delimiter without keeping it, `std::istringstream` parses words from each line using the same whitespace rules as `operator>>`, and a container such as `std::vector` can hold the intermediate lines when that makes the two-pass logic easier to read.
 
 Example shape:
 

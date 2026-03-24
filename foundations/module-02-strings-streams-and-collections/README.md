@@ -4,6 +4,7 @@ This module moves from “one program” into the first data-processing pattern 
 
 - store text in `std::string`
 - read it with stream tools like `std::getline` and `std::istringstream`
-- use a small standard container when a sequence is easier to inspect than a single pass
+- remember that `std::getline` strips the delimiter, while `operator>>` breaks on whitespace
+- use a small standard container when keeping the intermediate lines makes the parser easier to follow
 
 Start with the lesson, then try the drill, then implement the assignment from the test.
