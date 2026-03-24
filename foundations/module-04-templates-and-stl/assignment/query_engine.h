@@ -3,12 +3,15 @@
 
 #include <algorithm>
 #include <iterator>
+#include <type_traits>
 #include <vector>
 
 template <typename Range, typename Predicate>
 auto filter_values(const Range& values, Predicate predicate)
-    -> std::vector<typename Range::value_type> {
-    std::vector<typename Range::value_type> filtered;
+    -> std::vector<std::remove_cvref_t<decltype(*std::begin(values))>> {
+    using Value = std::remove_cvref_t<decltype(*std::begin(values))>;
+
+    std::vector<Value> filtered;
     std::copy_if(std::begin(values), std::end(values), std::back_inserter(filtered), predicate);
     return filtered;
 }

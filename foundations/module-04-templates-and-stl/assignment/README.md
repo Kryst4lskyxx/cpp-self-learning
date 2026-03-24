@@ -9,3 +9,5 @@ The test expects generic behavior:
 - the returned vector contains only the matching elements, in their original order
 
 Use templates and standard algorithms. The goal is to practice the C++ way of expressing generic behavior, not to build a large query system.
+
+`std::back_inserter` is the bridge from the algorithm to the destination vector: it turns the container into an output iterator that appends each accepted element with `push_back`.
