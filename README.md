@@ -7,6 +7,13 @@ This repository contains a working first learning slice:
 - one synthesis project in `projects/`
 - one optional expert module in `tracks/expert/`
 
+The next planned foundations arc is the generic-programming sequence:
+- `foundations/module-05-iterators-and-algorithm-contracts`
+- `foundations/module-06-algorithmic-data-transformation`
+- `foundations/module-07-associative-containers-and-lookup-patterns`
+- `foundations/module-08-callable-objects-and-customization`
+- `foundations/module-09-stronger-template-interfaces`
+
 Start with [docs/learning-path.md](docs/learning-path.md) to see the current path through the repo, then use [docs/tooling.md](docs/tooling.md) for the build and test commands.
 
 Build and test from the repository root:
@@ -39,3 +46,11 @@ ctest --test-dir build
 - `foundations/module-04-templates-and-stl`
 - `projects/project-01-mini-search-engine`
 - `tracks/expert/expert-01-move-semantics-and-value-categories`
+
+## Planned Next
+
+- `foundations/module-05-iterators-and-algorithm-contracts`
+- `foundations/module-06-algorithmic-data-transformation`
+- `foundations/module-07-associative-containers-and-lookup-patterns`
+- `foundations/module-08-callable-objects-and-customization`
+- `foundations/module-09-stronger-template-interfaces`

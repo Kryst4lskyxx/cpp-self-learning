@@ -8,6 +8,14 @@ Ordered curriculum shape:
 2. `projects/` - small applied exercises built from the foundations
 3. `tracks/` and `expert/` - narrower paths for deeper specialization
 
+The next foundations arc is planned, not shipped yet:
+
+- `module-05-iterators-and-algorithm-contracts`
+- `module-06-algorithmic-data-transformation`
+- `module-07-associative-containers-and-lookup-patterns`
+- `module-08-callable-objects-and-customization`
+- `module-09-stronger-template-interfaces`
+
 Current scope:
 
 - The foundations index exists so the root build can register the directory.

@@ -31,6 +31,14 @@ The curriculum layout above is now partially populated. The current repository i
 
 The path is still incomplete relative to the long-term roadmap, but it is now a live starting point rather than a placeholder structure.
 
+The next planned foundations arc is the generic-programming sequence:
+
+- [ ] module-05-iterators-and-algorithm-contracts
+- [ ] module-06-algorithmic-data-transformation
+- [ ] module-07-associative-containers-and-lookup-patterns
+- [ ] module-08-callable-objects-and-customization
+- [ ] module-09-stronger-template-interfaces
+
 ## What Each Stage Should Cover
 
 - `foundations/`: syntax, compilation, strings, streams, containers, references, const correctness, classes, templates, and STL basics.
