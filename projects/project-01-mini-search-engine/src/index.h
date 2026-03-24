@@ -1,5 +1,7 @@
 #pragma once
 
+#include <cstddef>
+#include <unordered_map>
 #include <string>
 #include <vector>
 
@@ -18,8 +20,13 @@ private:
 
     struct Document {
         std::string id;
-        std::vector<std::string> terms;
+    };
+
+    struct Posting {
+        std::size_t document_index = 0;
+        int term_frequency = 0;
     };
 
     std::vector<Document> documents_;
+    std::unordered_map<std::string, std::vector<Posting>> postings_;
 };

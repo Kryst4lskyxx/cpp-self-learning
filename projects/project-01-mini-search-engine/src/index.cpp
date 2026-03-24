@@ -21,32 +21,42 @@ std::string normalize_token(const std::string& token) {
 } // namespace
 
 void SearchIndex::add_document(std::string document_id, std::string text) {
-    documents_.push_back({std::move(document_id), tokenize(text)});
+    const auto document_index = documents_.size();
+    documents_.push_back({std::move(document_id)});
+
+    std::unordered_map<std::string, int> term_counts;
+    for (const auto& term : tokenize(text)) {
+        ++term_counts[term];
+    }
+
+    for (const auto& [term, frequency] : term_counts) {
+        postings_[term].push_back({document_index, frequency});
+    }
 }
 
 std::vector<SearchResult> SearchIndex::search(const std::string& query) const {
     const std::vector<std::string> query_terms = tokenize(query);
     std::unordered_set<std::string> unique_query_terms(query_terms.begin(), query_terms.end());
 
+    std::vector<int> scores(documents_.size(), 0);
+
+    for (const auto& term : unique_query_terms) {
+        const auto postings = postings_.find(term);
+        if (postings == postings_.end()) {
+            continue;
+        }
+
+        for (const auto& posting : postings->second) {
+            scores[posting.document_index] += posting.term_frequency;
+        }
+    }
+
     std::vector<SearchResult> results;
     results.reserve(documents_.size());
 
-    for (const auto& document : documents_) {
-        std::unordered_map<std::string, int> term_counts;
-        for (const auto& term : document.terms) {
-            ++term_counts[term];
-        }
-
-        int score = 0;
-        for (const auto& term : unique_query_terms) {
-            const auto term_count = term_counts.find(term);
-            if (term_count != term_counts.end()) {
-                score += term_count->second;
-            }
-        }
-
-        if (score > 0) {
-            results.push_back({document.id, score});
+    for (std::size_t index = 0; index < documents_.size(); ++index) {
+        if (scores[index] > 0) {
+            results.push_back({documents_[index].id, scores[index]});
         }
     }
 

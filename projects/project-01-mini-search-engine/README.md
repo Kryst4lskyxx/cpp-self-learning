@@ -2,6 +2,8 @@
 
 A compact inverted-index search engine built as a small library, a command-line interface, and a test suite.
 
+Documents are tokenized once at ingest time, and searches accumulate scores from token postings lists.
+
 ## Build
 
 ```bash
