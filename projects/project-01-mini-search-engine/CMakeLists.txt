@@ -1,0 +1,10 @@
+add_library(project_01_index src/index.cpp)
+target_include_directories(project_01_index PUBLIC src)
+cpp_self_learning_enable_warnings(project_01_index)
+target_compile_features(project_01_index PRIVATE cxx_std_20)
+
+add_executable(project_01_mini_search_engine src/main.cpp)
+target_link_libraries(project_01_mini_search_engine PRIVATE project_01_index)
+cpp_self_learning_enable_warnings(project_01_mini_search_engine)
+target_compile_features(project_01_mini_search_engine PRIVATE cxx_std_20)
+set_target_properties(project_01_mini_search_engine PROPERTIES OUTPUT_NAME mini_search_engine)

@@ -1,0 +1,6 @@
+add_executable(project_01_tests test_index.cpp)
+target_link_libraries(project_01_tests PRIVATE learning_test_main project_01_index)
+cpp_self_learning_enable_warnings(project_01_tests)
+target_compile_features(project_01_tests PRIVATE cxx_std_20)
+
+add_test(NAME project_01_mini_search_engine COMMAND project_01_tests)
