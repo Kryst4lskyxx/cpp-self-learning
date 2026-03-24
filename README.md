@@ -2,14 +2,16 @@
 
 This is an AI-native C++ self-learning project generated with Codex.
 
-This repository contains a working first learning slice:
-- four `foundations/` modules
+This repository contains a working curriculum slice:
+- six `foundations/` modules
 - one synthesis project in `projects/`
 - one optional expert module in `tracks/expert/`
 
-The next planned foundations arc is the generic-programming sequence:
+The current generic-programming arc now includes:
 - `foundations/module-05-iterators-and-algorithm-contracts`
 - `foundations/module-06-algorithmic-data-transformation`
+
+The next planned foundations modules are:
 - `foundations/module-07-associative-containers-and-lookup-patterns`
 - `foundations/module-08-callable-objects-and-customization`
 - `foundations/module-09-stronger-template-interfaces`
@@ -44,13 +46,13 @@ ctest --test-dir build
 - `foundations/module-02-strings-streams-and-collections`
 - `foundations/module-03-classes-and-const-correctness`
 - `foundations/module-04-templates-and-stl`
+- `foundations/module-05-iterators-and-algorithm-contracts`
+- `foundations/module-06-algorithmic-data-transformation`
 - `projects/project-01-mini-search-engine`
 - `tracks/expert/expert-01-move-semantics-and-value-categories`
 
 ## Planned Next
 
-- `foundations/module-05-iterators-and-algorithm-contracts`
-- `foundations/module-06-algorithmic-data-transformation`
 - `foundations/module-07-associative-containers-and-lookup-patterns`
 - `foundations/module-08-callable-objects-and-customization`
 - `foundations/module-09-stronger-template-interfaces`
