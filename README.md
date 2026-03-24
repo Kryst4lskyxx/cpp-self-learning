@@ -1,5 +1,7 @@
 # cpp-self-learning
 
+This is an AI-native C++ self-learning project generated with Codex.
+
 This repository currently has the root build skeleton and learner-facing docs.
 Start with [docs/learning-path.md](docs/learning-path.md) to understand the intended curriculum shape, then use [docs/tooling.md](docs/tooling.md) for the build and test commands.
 
