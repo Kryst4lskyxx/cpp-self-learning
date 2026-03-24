@@ -6,7 +6,7 @@ Ordered curriculum shape:
 
 1. `foundations/` - core C++ and build fundamentals
 2. `projects/` - small applied exercises built from the foundations
-3. `tracks/` and `expert/` - narrower paths for deeper specialization
+3. `tracks/expert/` - narrower paths for deeper specialization
 
 The next foundations arc is planned, not shipped yet:
 
