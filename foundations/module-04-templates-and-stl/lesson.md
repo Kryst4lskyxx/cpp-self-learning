@@ -7,6 +7,8 @@ This module is about the two ideas that make C++ generic code practical:
 
 The key mental model is that a template does not "run for everything." It is instantiated for the specific types you pass in, and the compiler checks whether the operations you use are valid for those types.
 
+Because instantiation happens where the template is used, the definition has to be visible to the caller, which is why the implementation lives in the header.
+
 `std::back_inserter` is worth knowing here because it adapts a container into an output iterator. That lets `std::copy_if` append matches without you writing a manual `push_back` loop.
 
 For the assignment, that means a small filtering helper can stay generic while still using familiar tools like `std::copy_if` and `std::back_inserter`:
