@@ -1,0 +1,8 @@
+add_library(module_03_assignment assignment/library.cpp)
+target_include_directories(module_03_assignment PUBLIC assignment)
+cpp_self_learning_enable_warnings(module_03_assignment)
+target_compile_features(module_03_assignment PRIVATE cxx_std_20)
+
+add_executable(module_03_drill drills/counter.cpp)
+cpp_self_learning_enable_warnings(module_03_drill)
+target_compile_features(module_03_drill PRIVATE cxx_std_20)
