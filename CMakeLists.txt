@@ -12,3 +12,4 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 include(cmake/Warnings.cmake)
 include(cmake/Testing.cmake)
+add_subdirectory(tooling/tests)
