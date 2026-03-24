@@ -20,7 +20,16 @@ This repository is organized for experienced programmers who already know anothe
 
 ## Current Scope
 
-The curriculum layout above is the intended order for future content. In the current repository, those learning directories are not populated yet, so this doc is a roadmap rather than a live module index.
+The curriculum layout above is now partially populated. The current repository includes:
+
+- `foundations/module-01-tooling-and-first-program`
+- `foundations/module-02-strings-streams-and-collections`
+- `foundations/module-03-classes-and-const-correctness`
+- `foundations/module-04-templates-and-stl`
+- `projects/project-01-mini-search-engine`
+- `tracks/expert/expert-01-move-semantics-and-value-categories`
+
+The path is still incomplete relative to the long-term roadmap, but it is now a live starting point rather than a placeholder structure.
 
 ## What Each Stage Should Cover
 

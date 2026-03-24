@@ -2,15 +2,19 @@
 
 This is an AI-native C++ self-learning project generated with Codex.
 
-This repository currently has the root build skeleton and learner-facing docs.
-Start with [docs/learning-path.md](docs/learning-path.md) to understand the intended curriculum shape, then use [docs/tooling.md](docs/tooling.md) for the build and test commands.
+This repository contains a working first learning slice:
+- four `foundations/` modules
+- one synthesis project in `projects/`
+- one optional expert module in `tracks/expert/`
 
-Expected root build commands after Task 1:
+Start with [docs/learning-path.md](docs/learning-path.md) to see the current path through the repo, then use [docs/tooling.md](docs/tooling.md) for the build and test commands.
 
-```cmake
-# cmake -S . -B build
-# cmake --build build
-# ctest --test-dir build
+Build and test from the repository root:
+
+```bash
+cmake -S . -B build
+cmake --build build
+ctest --test-dir build
 ```
 
 ## Documentation Checklist
@@ -26,3 +30,12 @@ Expected root build commands after Task 1:
 - [Tooling guide](docs/tooling.md)
 - [Content contract](docs/content-contract.md)
 - [Contributor guide](docs/contributing.md)
+
+## Current Content
+
+- `foundations/module-01-tooling-and-first-program`
+- `foundations/module-02-strings-streams-and-collections`
+- `foundations/module-03-classes-and-const-correctness`
+- `foundations/module-04-templates-and-stl`
+- `projects/project-01-mini-search-engine`
+- `tracks/expert/expert-01-move-semantics-and-value-categories`
