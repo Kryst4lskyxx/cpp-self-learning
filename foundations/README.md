@@ -19,5 +19,6 @@ The next foundations arc is planned, not shipped yet:
 Current scope:
 
 - The foundations index exists so the root build can register the directory.
-- No lesson modules have been added yet.
+- Modules 01-04 are present in the current foundations slice.
+- Modules 05-09 are planned next as the generic-programming arc and are not created yet.
 - The index will grow by adding module directories here in order.
