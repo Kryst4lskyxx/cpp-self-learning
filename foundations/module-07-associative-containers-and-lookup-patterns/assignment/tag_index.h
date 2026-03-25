@@ -1,11 +1,12 @@
 #ifndef FOUNDATIONS_MODULE_07_ASSOCIATIVE_CONTAINERS_AND_LOOKUP_PATTERNS_ASSIGNMENT_TAG_INDEX_H_
 #define FOUNDATIONS_MODULE_07_ASSOCIATIVE_CONTAINERS_AND_LOOKUP_PATTERNS_ASSIGNMENT_TAG_INDEX_H_
 
+#include <algorithm>
 #include <initializer_list>
-#include <set>
 #include <string>
 #include <string_view>
 #include <unordered_map>
+#include <unordered_set>
 #include <vector>
 
 class TagIndex {
@@ -22,11 +23,13 @@ public:
             return {};
         }
 
-        return {it->second.begin(), it->second.end()};
+        std::vector<std::string> ids{it->second.begin(), it->second.end()};
+        std::sort(ids.begin(), ids.end());
+        return ids;
     }
 
 private:
-    std::unordered_map<std::string, std::set<std::string>> index_;
+    std::unordered_map<std::string, std::unordered_set<std::string>> index_;
 };
 
 #endif  // FOUNDATIONS_MODULE_07_ASSOCIATIVE_CONTAINERS_AND_LOOKUP_PATTERNS_ASSIGNMENT_TAG_INDEX_H_
