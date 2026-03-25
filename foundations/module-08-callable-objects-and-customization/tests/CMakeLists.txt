@@ -1,0 +1,6 @@
+add_executable(module_08_tests test_ranker.cpp)
+target_link_libraries(module_08_tests PRIVATE learning_test_main module_08_assignment)
+cpp_self_learning_enable_warnings(module_08_tests)
+target_compile_features(module_08_tests PRIVATE cxx_std_20)
+
+add_test(NAME module_08_ranker COMMAND module_08_tests)
