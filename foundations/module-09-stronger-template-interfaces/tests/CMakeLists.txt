@@ -1,0 +1,7 @@
+add_executable(module_09_tests test_group_by.cpp)
+target_link_libraries(module_09_tests PRIVATE learning_test_main module_09_assignment)
+cpp_self_learning_enable_warnings(module_09_tests)
+target_compile_features(module_09_tests PRIVATE cxx_std_20)
+
+add_test(NAME module_09_group_by COMMAND module_09_tests)
+
