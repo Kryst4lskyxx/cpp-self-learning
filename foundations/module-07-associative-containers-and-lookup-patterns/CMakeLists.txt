@@ -1,0 +1,3 @@
+add_library(module_07_assignment INTERFACE)
+target_include_directories(module_07_assignment INTERFACE assignment drills)
+target_compile_features(module_07_assignment INTERFACE cxx_std_20)
