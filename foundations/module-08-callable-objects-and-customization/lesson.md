@@ -6,7 +6,7 @@ The caller can supply a lambda, function pointer, or function object, and the al
 
 This module uses two small patterns:
 
-- a threshold filter, where the caller controls what counts as a match
+- a threshold filter, where the caller supplies a threshold and an optional comparator
 - a ranker, where the caller controls how each value is scored before sorting
 
 Keep the implementations small and explicit. The point is to make the customization point visible in the API, not to build a general-purpose framework.
