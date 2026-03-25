@@ -3,18 +3,21 @@
 This is an AI-native C++ self-learning project generated with Codex.
 
 This repository contains a working curriculum slice:
-- six `foundations/` modules
+- nine `foundations/` modules
 - one synthesis project in `projects/`
 - one optional expert module in `tracks/expert/`
 
-The current generic-programming arc now includes:
+The V2 generic-programming arc now includes:
 - `foundations/module-05-iterators-and-algorithm-contracts`
 - `foundations/module-06-algorithmic-data-transformation`
-
-The next planned foundations modules are:
 - `foundations/module-07-associative-containers-and-lookup-patterns`
 - `foundations/module-08-callable-objects-and-customization`
 - `foundations/module-09-stronger-template-interfaces`
+
+Current execution status:
+- Modules 01-08 are implemented and reviewed
+- Module 09 is implemented and awaiting review closure
+- final V2 navigation/integration cleanup is still pending
 
 Start with [docs/learning-path.md](docs/learning-path.md) to see the current path through the repo, then use [docs/tooling.md](docs/tooling.md) for the build and test commands.
 
@@ -48,11 +51,14 @@ ctest --test-dir build
 - `foundations/module-04-templates-and-stl`
 - `foundations/module-05-iterators-and-algorithm-contracts`
 - `foundations/module-06-algorithmic-data-transformation`
-- `projects/project-01-mini-search-engine`
-- `tracks/expert/expert-01-move-semantics-and-value-categories`
-
-## Planned Next
-
 - `foundations/module-07-associative-containers-and-lookup-patterns`
 - `foundations/module-08-callable-objects-and-customization`
 - `foundations/module-09-stronger-template-interfaces`
+- `projects/project-01-mini-search-engine`
+- `tracks/expert/expert-01-move-semantics-and-value-categories`
+
+## Remaining Work
+
+- close Module 09 spec/code-quality review
+- finalize V2 navigation and learner-facing docs
+- run final repo-wide verification for the V2 foundations arc
