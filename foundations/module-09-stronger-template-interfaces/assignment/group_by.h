@@ -18,13 +18,18 @@ struct group_by_traits {
         std::invoke_result_t<KeySelector, std::ranges::range_reference_t<const Range>>>;
 };
 
+template <typename Key>
+concept ordered_map_key = requires(const Key& lhs, const Key& rhs) {
+    { lhs < rhs } -> std::convertible_to<bool>;
+};
+
 }  // namespace detail
 
 template <typename Range, typename KeySelector>
 requires std::ranges::input_range<const Range> &&
          std::copy_constructible<std::ranges::range_value_t<const Range>> &&
          std::invocable<KeySelector, std::ranges::range_reference_t<const Range>> &&
-         std::totally_ordered<std::remove_cvref_t<
+         detail::ordered_map_key<std::remove_cvref_t<
              std::invoke_result_t<KeySelector, std::ranges::range_reference_t<const Range>>>>
 auto group_by(const Range& values, KeySelector key_selector)
     -> std::map<typename detail::group_by_traits<Range, KeySelector>::key_type,

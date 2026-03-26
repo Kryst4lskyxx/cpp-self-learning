@@ -1,6 +1,6 @@
 # Foundations is the first learner index in the curriculum tree.
 # Modules will be registered here as they are created.
-# Planned V2 generic-programming arc will register below these shipped modules.
+# The V2 generic-programming arc now extends the shipped foundations modules below.
 
 include(AddLearningModule)
 

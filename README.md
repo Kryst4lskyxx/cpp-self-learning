@@ -15,9 +15,9 @@ The V2 generic-programming arc now includes:
 - `foundations/module-09-stronger-template-interfaces`
 
 Current execution status:
-- Modules 01-08 are implemented and reviewed
-- Module 09 is implemented and awaiting review closure
-- final V2 navigation/integration cleanup is still pending
+- V1 is shipped with foundations Modules 01-04, Project 01, and Expert 01
+- V2 foundations Modules 05-09 are implemented in-tree as the generic-programming arc
+- learner-facing navigation and build registration now reflect the shipped foundations path
 
 Start with [docs/learning-path.md](docs/learning-path.md) to see the current path through the repo, then use [docs/tooling.md](docs/tooling.md) for the build and test commands.
 
@@ -57,8 +57,7 @@ ctest --test-dir build
 - `projects/project-01-mini-search-engine`
 - `tracks/expert/expert-01-move-semantics-and-value-categories`
 
-## Remaining Work
+## Current Focus
 
-- close Module 09 spec/code-quality review
-- finalize V2 navigation and learner-facing docs
-- run final repo-wide verification for the V2 foundations arc
+- extend the curriculum beyond the shipped V2 foundations arc
+- add more projects and expert-track material in later iterations
