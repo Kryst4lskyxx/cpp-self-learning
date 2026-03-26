@@ -7,6 +7,25 @@
 #include <type_traits>
 #include <vector>
 
+namespace {
+
+struct move_only_string {
+    move_only_string() = default;
+    move_only_string(const move_only_string&) = delete;
+    move_only_string& operator=(const move_only_string&) = delete;
+    move_only_string(move_only_string&&) = default;
+    move_only_string& operator=(move_only_string&&) = default;
+};
+
+template <typename Value>
+concept can_group_by_values = requires(const std::vector<Value>& values) {
+    group_by(values, [](const Value&) { return 0; });
+};
+
+static_assert(!can_group_by_values<move_only_string>);
+
+}  // namespace
+
 TEST_CASE("group_by returns an empty map for empty input") {
     const std::vector<int> values{};
 

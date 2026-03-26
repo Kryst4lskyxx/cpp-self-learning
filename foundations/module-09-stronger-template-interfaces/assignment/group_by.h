@@ -22,6 +22,7 @@ struct group_by_traits {
 
 template <typename Range, typename KeySelector>
 requires std::ranges::input_range<const Range> &&
+         std::copy_constructible<std::ranges::range_value_t<const Range>> &&
          std::invocable<KeySelector, std::ranges::range_reference_t<const Range>> &&
          std::totally_ordered<std::remove_cvref_t<
              std::invoke_result_t<KeySelector, std::ranges::range_reference_t<const Range>>>>
