@@ -14,6 +14,7 @@ For the assignment, the helper groups values by a caller-provided selector:
 
 ```cpp
 template <typename Range, typename KeySelector>
+requires /* range is readable as const, selector accepts each element, key is ordered */
 auto group_by(const Range& values, KeySelector key_selector);
 ```
 
