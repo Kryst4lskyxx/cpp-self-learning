@@ -52,6 +52,38 @@ Secondary targets, only where needed:
 
 The implementation should prefer in-place improvement over new documentation branches. Learners should still move through the repo using the same files and directories they use today.
 
+Secondary edits should follow strict triggers:
+
+- edit a `drills/README.md` only if the current drill text is too terse to explain the drill goal, expected input/output shape, or likely debugging path
+- edit top-level learner navigation docs only if the first-pass modules expose a concrete navigation mismatch, such as the root docs not explaining the refined tutorial workflow clearly enough
+
+If no such gap appears during the first pass, these secondary edits should be deferred.
+
+## File Mapping
+
+The tutorial structure should map onto the existing module contract consistently.
+
+Default distribution:
+
+- `README.md`
+  - `What You'll Build`
+  - `Before You Start`
+  - a short `Wrap-Up` pointer if the module needs one
+- `lesson.md`
+  - core concept explanation
+  - `Code Examples`
+  - `Common Mistakes`
+- `assignment/README.md`
+  - contract-focused implementation steps
+  - step-by-step checkpoints tied directly to the test-driven exercise
+  - final verification reminder
+
+Additional rule:
+
+- `assignment/README.md` must remain contract-focused. It should not become a worked solution or absorb most of the conceptual teaching. Tutorial scaffolding should live primarily in `README.md` and `lesson.md`, unless a module truly needs a small assignment-level checkpoint to keep the learner moving.
+
+This file distribution should be the default for all rewritten modules. Deviations should be rare and justified by the module shape.
+
 ## Tutorial Structure
 
 Each foundations module should move toward a consistent teaching flow.
@@ -105,6 +137,13 @@ That means:
 
 The learner should still do real problem solving, but the next action should be much clearer than it is in the current terse modules.
 
+Guardrails for examples and walkthrough depth:
+
+- code examples should stay short, usually a few lines to one small block
+- examples should explain a concept or API shape, not reproduce the final assignment implementation
+- assignment-adjacent snippets may illustrate one step, but they should not chain into a near-complete answer
+- examples should prefer toy or isolated fragments unless a real file-level snippet is necessary to remove ambiguity
+
 ## Rollout Strategy
 
 This should be implemented in phases rather than as one flat rewrite of all nine modules.
@@ -126,6 +165,8 @@ Rewrite the remaining foundations modules using the same structure and tone.
 ### Phase 3: Navigation Polish
 
 Update repo-level docs so the learning path clearly explains the more guided workflow and points learners at the refined foundations sequence.
+
+Approval of this spec means a full V3 doc-refinement iteration is intended, but implementation planning should still sequence the work phase by phase. Phase 1 establishes the template first; Phase 2 and Phase 3 complete the rest of the shipped foundations path and navigation polish.
 
 ## Teaching Principles
 
