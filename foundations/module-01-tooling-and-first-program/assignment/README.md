@@ -1,13 +1,14 @@
 # Assignment
 
-Your task is to make the assignment executable satisfy the contract checked by `tests/test_hello_cli.cpp`.
+This module is a contract exercise, not a broken starter. The checked-in repo already contains a passing `assignment/main.cpp`, so use the test as the source of truth for the behavior and the module-specific build/test loop.
 
 ## Checkpoints
 
-1. Read the test first and note the exact output string it expects.
-2. Change only `assignment/main.cpp`.
-3. Keep the program direct: one executable, one line of output, no interactive prompts.
-4. Build the assignment target and run the full test suite with `ctest --test-dir build`.
+1. Read `tests/test_hello_cli.cpp` and note the exact output string it expects.
+2. Build the assignment target with `cmake --build build --target module_01_assignment`.
+3. Run only the Module 01 test with `ctest --test-dir build -R module_01_hello_cli`.
+4. If you are practicing the edit in your own branch or scratch checkout, change only `assignment/main.cpp`.
+5. Rebuild the target and rerun the same module test after any change.
 
 The contract is strict:
 
@@ -17,4 +18,4 @@ The contract is strict:
 
 ## Final Verification
 
-When the test passes, rerun `ctest --test-dir build` once more before you consider the assignment complete.
+When the module test passes, rerun `cmake --build build --target module_01_assignment` and `ctest --test-dir build -R module_01_hello_cli` once more before you consider the assignment complete.
