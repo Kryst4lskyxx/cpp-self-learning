@@ -1,8 +1,13 @@
 # Module 05: Iterators and Algorithm Contracts
 
-This module introduces two habits that matter in generic code:
+## What You'll Build
 
-- treat iterator pairs as half-open ranges, `[first, last)`
-- check algorithm preconditions before relying on an algorithm style such as binary search
+You will write a tiny helper that checks whether a range is ready for binary search by inspecting the range contract instead of performing a search.
 
-Start with the lesson, try the drill, then implement the assignment from the test.
+## Before You Start
+
+- Read the lesson to refresh the `[first, last)` range shape.
+- Skim the assignment tests so you can see the expected sorted and unsorted cases.
+- If the range boundary model feels rusty, try the drill first and then come back here.
+
+If you want a quick recap after the assignment, return to the lesson and the drill together: they cover the same iterator-range idea from two angles.

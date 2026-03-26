@@ -1,22 +1,36 @@
 # Lesson
 
-This module is about the shape of iterator-based algorithms.
+This module is about two habits that keep iterator-based code correct:
 
-What to notice:
+- treat iterator pairs as half-open ranges, `[first, last)`
+- check an algorithm's contract before you rely on it
 
-- a range is usually represented by two iterators, and the end iterator is one past the last element
-- `std::distance(first, last)` measures the size of that half-open range
-- algorithms such as `std::binary_search` assume their input is already sorted
-- in this module, "sorted" means the range is in the default ascending order checked by
-  `std::is_sorted`
+The half-open shape is the reason `last` is not part of the range. If a vector has three elements, the valid pair is the iterator to the first element and the iterator one past the third element. That lets algorithms stop cleanly without special cases for the final element.
 
-The useful mental model is that algorithm contracts are part of the API, even when they are not written into the function signature.
+`std::distance(first, last)` measures that span. `std::is_sorted(first, last)` checks the ordering contract directly.
 
-For the assignment, that means a tiny helper can stay focused on one question:
+For binary search, the contract is simple: the input must already be sorted in ascending order. In this module, "sorted" means the default ordering that `std::is_sorted` checks.
+
+## Code Examples
 
 ```cpp
-template <typename Range>
-bool is_sorted_for_binary_search(const Range& values);
+std::vector<int> values{10, 20, 30};
+auto n = std::distance(values.begin(), values.end());  // 3
 ```
 
-Keep it small. The goal is to recognize the contract, not to build a wrapper around every search algorithm.
+The end iterator is one past `30`, so the range has three elements and not four.
+
+```cpp
+std::vector<int> ok{1, 2, 2, 4};
+std::vector<int> bad{2, 1, 3};
+
+std::is_sorted(ok.begin(), ok.end());   // true
+std::is_sorted(bad.begin(), bad.end()); // false
+```
+
+## Common Mistakes
+
+- Treating `last` as if it points at the final element instead of one past it.
+- Checking sortedness by running a search algorithm and hoping the result proves the precondition.
+- Mixing up "sorted" with "contains no duplicates." Duplicates are fine as long as the range stays in ascending order.
+- Forgetting that the contract is about the whole iterator range, not just a few sampled elements.
