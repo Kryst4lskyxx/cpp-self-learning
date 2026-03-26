@@ -21,4 +21,5 @@ Current scope:
 - The foundations index exists so the root build can register the directory.
 - Modules 01-04 establish the original foundations slice.
 - Modules 05-09 extend that slice through iterators, algorithm pipelines, associative containers, callables, and stronger template interfaces.
+- The shipped modules now use a more guided tutorial format with setup steps, code examples, and assignment checkpoints.
 - The index will grow by adding module directories here in order.

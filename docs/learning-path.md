@@ -14,7 +14,10 @@ This repository is organized for experienced programmers who already know anothe
 ## How To Use It
 
 - Read the module `README.md` first.
-- Skim the lesson, then work the drills before starting the assignment.
+- Use the `Before You Start` section to open the right files and copy the module-specific build/test loop.
+- Read the lesson next, paying attention to the code examples and common mistakes.
+- Work the drills before starting the assignment when a module tells you to warm up there first.
+- Follow the assignment checkpoints step by step instead of trying to solve the whole exercise in one jump.
 - Build and test from the command line with the commands in [tooling.md](tooling.md).
 - Treat expert sections as extensions, not prerequisites, unless a module says otherwise.
 
@@ -35,6 +38,12 @@ The curriculum layout above is now populated through the first generic-programmi
 - `tracks/expert/expert-01-move-semantics-and-value-categories`
 
 The path is still incomplete relative to the long-term roadmap, but the full V2 foundations arc is now live instead of planned.
+
+The foundations modules now also follow a more tutorial-style format:
+
+- `README.md` tells you what to build, what to open first, and which command loop to run
+- `lesson.md` explains the core idea with small code examples and concrete mistakes to watch for
+- `assignment/README.md` turns the task into explicit checkpoints instead of a single opaque prompt
 
 The generic-programming sequence now ships as part of the foundations path:
 

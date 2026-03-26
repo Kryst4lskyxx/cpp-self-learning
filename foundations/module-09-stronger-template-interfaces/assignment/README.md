@@ -11,6 +11,7 @@ Your function should make these expectations clear:
 - the input range can be read through `const Range&`
 - the selector accepts each input value from that const range
 - the selector result can be used as the key in an ordered `std::map`
+- input values are stored in result buckets, so the range value type must be copy-constructible
 - values that produce the same key are collected into the same bucket
 - each bucket preserves original input order
 - the selector is invoked once per input value

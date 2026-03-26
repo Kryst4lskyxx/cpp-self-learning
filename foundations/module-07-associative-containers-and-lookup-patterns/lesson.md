@@ -22,7 +22,9 @@ std::unordered_map<std::string, int> fast_counts;
 Both containers answer the same key question, but they make different promises about order.
 
 ```cpp
-// store for lookup, sort for presentation
+index["cpp"].push_back("doc-2");
+index["cpp"].push_back("doc-1");
+std::ranges::sort(index["cpp"]);
 ```
 
 That split is the core pattern the assignment uses.

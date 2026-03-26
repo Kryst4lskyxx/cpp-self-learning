@@ -39,7 +39,9 @@ std::vector<std::string> words{"Cpp", "cpp", "STL"};
 The same word can appear in multiple forms before normalization.
 
 ```cpp
-// lowercase -> sort -> unique
+std::ranges::transform(values, values.begin(), to_lowercase);
+std::ranges::sort(values);
+values.erase(std::ranges::unique(values).begin(), values.end());
 ```
 
 That is the contract the assignment is asking you to express.

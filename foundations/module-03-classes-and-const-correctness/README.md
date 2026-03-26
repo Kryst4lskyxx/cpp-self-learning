@@ -7,6 +7,7 @@ You will build a small `Library` class that stores books, reports its size, and 
 ## Before You Start
 
 - Make sure `clang++`, CMake, and `ctest` are available.
+- If this is a fresh checkout, run `cmake -S . -B build` once from the repository root before using the module loop below.
 - Open `foundations/module-03-classes-and-const-correctness/lesson.md`, `foundations/module-03-classes-and-const-correctness/assignment/README.md`, `foundations/module-03-classes-and-const-correctness/assignment/library.h`, `foundations/module-03-classes-and-const-correctness/assignment/library.cpp`, and `foundations/module-03-classes-and-const-correctness/tests/test_library.cpp`.
 - Inspect `foundations/module-03-classes-and-const-correctness/tests/test_library.cpp` first so you can see the required API shape and return type.
 - Use `cmake --build build --target module_03_tests` and `ctest --test-dir build -R module_03_library` for the module-specific loop.

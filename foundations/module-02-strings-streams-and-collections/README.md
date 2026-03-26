@@ -7,6 +7,7 @@ You will write `analyze_text`, a small helper that measures a string of text by 
 ## Before You Start
 
 - Make sure `clang++`, CMake, and `ctest` are available.
+- If this is a fresh checkout, run `cmake -S . -B build` once from the repository root before using the module loop below.
 - Open `foundations/module-02-strings-streams-and-collections/lesson.md`, `foundations/module-02-strings-streams-and-collections/assignment/README.md`, `foundations/module-02-strings-streams-and-collections/assignment/text_stats.cpp`, and `foundations/module-02-strings-streams-and-collections/tests/test_text_stats.cpp`.
 - Inspect `foundations/module-02-strings-streams-and-collections/tests/test_text_stats.cpp` first so you know the exact contract before editing the implementation.
 - Use `cmake --build build --target module_02_tests` and `ctest --test-dir build -R module_02_text_stats` for the module-specific loop.

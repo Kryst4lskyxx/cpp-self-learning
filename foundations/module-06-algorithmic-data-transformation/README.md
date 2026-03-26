@@ -7,6 +7,7 @@ You will build a small word-normalization pipeline that turns mixed input into l
 ## Before You Start
 
 - Make sure `clang++`, CMake, and `ctest` are available on your machine.
+- If this is a fresh checkout, run `cmake -S . -B build` once from the repository root before using the module loop below.
 - Open `foundations/module-06-algorithmic-data-transformation/lesson.md`, `foundations/module-06-algorithmic-data-transformation/assignment/README.md`, and `foundations/module-06-algorithmic-data-transformation/tests/test_pipeline.cpp` before you begin.
 - Inspect `foundations/module-06-algorithmic-data-transformation/tests/test_pipeline.cpp` first so you can see the pipeline contract the tests encode.
 - Use `cmake --build build --target module_06_tests` and `ctest --test-dir build -R module_06_pipeline` for the module-specific build/test loop.

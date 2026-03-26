@@ -17,7 +17,7 @@ The V2 generic-programming arc now includes:
 Current execution status:
 - V1 is shipped with foundations Modules 01-04, Project 01, and Expert 01
 - V2 foundations Modules 05-09 are implemented in-tree as the generic-programming arc
-- learner-facing navigation and build registration now reflect the shipped foundations path
+- V3 tutorial docs now give the foundations path a more guided, step-by-step workflow with code examples and module-specific verification loops
 
 Start with [docs/learning-path.md](docs/learning-path.md) to see the current path through the repo, then use [docs/tooling.md](docs/tooling.md) for the build and test commands.
 
@@ -59,5 +59,5 @@ ctest --test-dir build
 
 ## Current Focus
 
-- extend the curriculum beyond the shipped V2 foundations arc
+- keep refining the tutorial quality of the shipped foundations path
 - add more projects and expert-track material in later iterations
