@@ -164,9 +164,9 @@ Rewrite the remaining foundations modules using the same structure and tone.
 
 ### Phase 3: Navigation Polish
 
-Update repo-level docs so the learning path clearly explains the more guided workflow and points learners at the refined foundations sequence.
+Only if Phase 1 exposes a concrete navigation mismatch, update repo-level docs so the learning path explains the refined workflow clearly and points learners at the rewritten foundations sequence.
 
-Approval of this spec means a full V3 doc-refinement iteration is intended, but implementation planning should still sequence the work phase by phase. Phase 1 establishes the template first; Phase 2 and Phase 3 complete the rest of the shipped foundations path and navigation polish.
+Approval of this spec means a full V3 doc-refinement iteration is intended, but implementation planning should still sequence the work phase by phase. Phase 1 establishes the template first; Phase 2 completes the remaining module rewrites; Phase 3 is conditional and should only happen if the first-pass modules expose a real repo-level navigation gap.
 
 ## Teaching Principles
 
@@ -212,6 +212,6 @@ The next implementation plan should:
 - start with the representative first-pass modules
 - define a reusable doc template for module rewrites
 - keep edits focused on learner-facing files
-- include a consistency pass so root docs reflect the refined tutorial workflow
+- include a consistency pass for root docs only if the first-pass modules expose a concrete navigation mismatch
 
 No implementation should begin until this design is translated into a concrete plan.
