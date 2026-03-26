@@ -23,6 +23,13 @@ Prerequisites:
 - you have CMake available
 - the repository has been configured once with `cmake -S . -B build`
 
+Module-specific build/test commands:
+
+```bash
+cmake --build build --target module_09_tests
+ctest --test-dir build --output-on-failure -R module_09_group_by
+```
+
 Open these files:
 
 - `foundations/module-09-stronger-template-interfaces/lesson.md`
