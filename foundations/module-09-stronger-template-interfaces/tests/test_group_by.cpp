@@ -4,6 +4,7 @@
 
 #include <map>
 #include <string>
+#include <type_traits>
 #include <vector>
 
 TEST_CASE("group_by returns an empty map for empty input") {
@@ -17,6 +18,8 @@ TEST_CASE("group_by returns an empty map for empty input") {
 TEST_CASE("group_by groups values by a caller-provided key selector") {
     const std::vector<std::string> values{"cpp", "c", "stl"};
     const auto grouped = group_by(values, [](const std::string& value) { return value.size(); });
+    using expected_grouped_type = std::map<decltype(values.size()), std::vector<std::string>>;
+    static_assert(std::is_same_v<std::remove_cvref_t<decltype(grouped)>, expected_grouped_type>);
 
     CHECK(grouped.size() == 2);
     CHECK(grouped.contains(1));
