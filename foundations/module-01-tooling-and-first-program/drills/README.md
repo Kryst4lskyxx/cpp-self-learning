@@ -8,4 +8,4 @@ This is a quick confidence check, not the assignment:
 
 - build the target with `cmake --build build --target module_01_drill`
 - run the generated executable from the build tree, for example `./build/foundations/module-01-tooling-and-first-program/module_01_drill`
-- use it to confirm the compiler, linker, and local environment are all working before you start the test-driven assignment
+- use it to confirm the compiler, linker, and local environment are all working before you move on to the assignment

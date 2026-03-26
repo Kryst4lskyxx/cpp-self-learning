@@ -4,7 +4,7 @@ This module is a contract exercise, not a broken starter. The checked-in repo al
 
 ## Checkpoints
 
-1. Read `tests/test_hello_cli.cpp` and note the exact output string it expects.
+1. Read `foundations/module-01-tooling-and-first-program/tests/test_hello_cli.cpp` and note the exact output string it expects.
 2. Build the assignment target with `cmake --build build --target module_01_assignment`.
 3. Run only the Module 01 test with `ctest --test-dir build -R module_01_hello_cli`.
 4. If you are practicing the edit in your own branch or scratch checkout, change only `assignment/main.cpp`.

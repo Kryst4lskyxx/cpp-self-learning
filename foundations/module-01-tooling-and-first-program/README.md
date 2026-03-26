@@ -16,7 +16,7 @@ The basic flow is:
 
 1. Read the lesson to understand the source-to-binary path and the module-specific test target.
 2. Build and run the drill to confirm the toolchain works.
-3. Read `assignment/README.md`, then build `module_01_assignment` and run `module_01_hello_cli` as the module-specific check.
+3. Read `assignment/README.md`, then build `module_01_assignment` and run `ctest --test-dir build -R module_01_hello_cli` as the module-specific check.
 
 ## Wrap Up
 
