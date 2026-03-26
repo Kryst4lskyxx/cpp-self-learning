@@ -12,9 +12,9 @@ The tests show one sorted example and one unsorted example, but your job is to i
 
 ## Test-Driven Checkpoints
 
-- Start from the contract, not the test data: a range that stays in ascending order should pass, and a range that breaks that order should fail.
-- Verify the helper against the provided examples after you have a direct check in place.
-- Keep the implementation generic over range-like inputs with `begin()` and `end()`.
+- Read the tests first and let them define the behavior you need to satisfy before you touch the header.
+- Keep the first pass as small as possible: write the direct check that makes the contract cases go green.
+- Re-run the tests after each edit, using the provided examples to confirm the generic range contract you derived.
 
 ## Final Verification
 
