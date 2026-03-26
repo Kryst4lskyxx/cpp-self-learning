@@ -12,7 +12,7 @@ That test-led shape matters for beginners:
 - the build step tells you whether the code compiles
 - the test tells you whether the program behaves exactly as expected
 
-## Small Examples
+## Code Examples
 
 The assignment follows the same pattern as a minimal C++ CLI:
 
@@ -44,3 +44,5 @@ ctest --test-dir build -R module_01_hello_cli
 - Building successfully and assuming the module test will pass without running it.
 - Using a shell command to print the right output instead of changing the program itself.
 - Forgetting that exact output includes the newline character.
+- If the test fails, compare the program output to the expected string character by character, including the newline.
+- If the build fails, check the target name and rebuild the assignment target before rerunning the module test.
