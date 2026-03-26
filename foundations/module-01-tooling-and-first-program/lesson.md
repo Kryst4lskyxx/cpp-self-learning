@@ -20,14 +20,14 @@ The assignment follows the same pattern as a minimal C++ CLI:
 #include <iostream>
 
 int main() {
-    std::cout << "hello\n";
+    std::cout << "hello modern cpp\n";
 }
 ```
 
 The build target is also simple and explicit:
 
 ```cmake
-add_executable(module_01_assignment assignment/main.cpp)
+add_executable(module_01_assignment foundations/module-01-tooling-and-first-program/assignment/main.cpp)
 ```
 
 The module uses two separate commands for the two checks:

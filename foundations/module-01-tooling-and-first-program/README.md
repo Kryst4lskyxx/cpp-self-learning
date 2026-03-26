@@ -11,7 +11,7 @@ You will learn how one tiny command-line program moves from source to a built ex
 - Make sure `clang++`, CMake, and `ctest` are available on your machine.
 - Start from the repository root and create the build tree with `cmake -S . -B build`.
 - Open `lesson.md`, `assignment/README.md`, and `tests/test_hello_cli.cpp` before you begin.
-- Inspect `tests/test_hello_cli.cpp` first so you understand the Module 01 contract before changing anything.
+- Inspect `foundations/module-01-tooling-and-first-program/tests/test_hello_cli.cpp` first so you understand the Module 01 contract before changing anything.
 - Use `cmake --build build --target module_01_assignment` and `ctest --test-dir build -R module_01_hello_cli` for the module-specific build/test loop.
 
 The basic flow is:
