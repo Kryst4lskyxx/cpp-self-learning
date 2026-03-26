@@ -1,9 +1,15 @@
 # Module 07: Associative Containers and Lookup Patterns
 
-This module focuses on choosing the right associative container for the job:
+## What You'll Build
 
-- use ordered containers when stable key order matters
-- use unordered containers when the main job is fast lookup
-- make the lookup contract explicit so tests describe the behavior, not the data structure
+You will build a tag index that keeps lookup fast internally while returning stable, sorted document ids to the caller.
 
-Start with the lesson, try the drill, then implement the assignment from the test.
+## Before You Start
+
+- Make sure `clang++`, CMake, and `ctest` are available on your machine.
+- Open `foundations/module-07-associative-containers-and-lookup-patterns/lesson.md`, `foundations/module-07-associative-containers-and-lookup-patterns/assignment/README.md`, and `foundations/module-07-associative-containers-and-lookup-patterns/tests/test_tag_index.cpp` before you begin.
+- Inspect `foundations/module-07-associative-containers-and-lookup-patterns/tests/test_tag_index.cpp` first so you can see the lookup contract the tests encode.
+- Use `cmake --build build --target module_07_tests` and `ctest --test-dir build -R module_07_tag_index` for the module-specific build/test loop.
+- If associative lookup feels rusty, try the drill first and then come back here.
+
+If you want a quick recap after the assignment, reread the lesson and compare it with the lookup behavior in the tests. The important part is the contract, not the container name.
